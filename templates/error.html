@@ -3,13 +3,13 @@
 <head>
   <title>Cannonball</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="/stylesheets/normalize.css">
-  <link rel="stylesheet" href="/stylesheets/cannonball.css">
-  <link rel="icon" href="/images/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="/images/touch-icon.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/images/touch-icon-ipad.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/images/touch-icon-iphone-retina.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/images/touch-icon-ipad-retina.png">
+  <link rel="stylesheet" href="/static/stylesheets/normalize.css">
+  <link rel="stylesheet" href="/static/stylesheets/cannonball.css">
+  <link rel="icon" href="/static/images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/static/images/touch-icon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/images/touch-icon-ipad.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/static/images/touch-icon-iphone-retina.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/images/touch-icon-ipad-retina.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@cannonballapp">
@@ -33,9 +33,9 @@
       <section class="cannonball">
         <header>
           <h1 class="logo bounce"><a href="/">Cannonball</a></h1>
-          <h2><%= error.status %> <%= message %></h2>
+          <h2>{{error_status}}  {{message}}</h2>
         </header>
-        <pre><%= error.stack %></pre>
+        <pre>{{error_stack}}</pre>
       </section>
     </main>
   </div>
@@ -44,7 +44,7 @@
   </footer>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script id="digits-sdk" src="https://cdn.digits.com/1/sdk.js" async></script>
-  <script src="/javascripts/cannonball.js"></script>
+  <script src="/static/javascripts/cannonball.js"></script>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </body>
 </html>
